@@ -1,4 +1,4 @@
-import homeLogo from '../../assets/home.gif'
+
 import './Home.css';
 import ListaPostagens from '../../components/postagens/listaPostagens/ListaPostagens';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
@@ -21,7 +21,7 @@ function Home() {
             </div>
   
             <div className="flex justify-center ">
-              <img src={homeLogo} alt="" className='w-2/3' />
+              <img src= "https://i.imgur.com/gbEm1H4.jpg" alt="" className='w-2/3' />
       
             </div>
           </div>
