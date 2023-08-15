@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import './Login.css';
 
 import { Link, useNavigate } from 'react-router-dom';
@@ -38,10 +38,10 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-slate-950">
         <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
-          <h2 className="text-slate-900 text-5xl ">Entrar</h2>
-          <div className="flex flex-col w-full">
+          <h2 className="text-white text-5xl ">Entrar</h2>
+          <div className="flex flex-col w-full text-white">
             <label htmlFor="usuario">Usuário</label>
             <input
               type="text"
@@ -54,7 +54,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
+            <label htmlFor="senha" className='text-white'>Senha</label>
             <input
               type="password"
               id="senha"
@@ -65,7 +65,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <button  type='submit' className="rounded bg-indigo-400 hover:bg-indigo-900 text-white w-1/2 py-2 flex justify-center">
+          <button  type='submit' className="rounded bg-red-900 hover:bg-red-700 text-black w-1/2 py-2 flex justify-center">
            {isLoading ? <RotatingLines
             strokeColor="white"
             strokeWidth="5"
@@ -76,11 +76,11 @@ function login(e: ChangeEvent<HTMLFormElement>) {
             <span>Entrar</span>}
           </button>
 
-          <hr className="border-slate-800 w-full" />
+          <hr className="border-slate-200 w-full" />
 
-          <p>
+          <p className='text-white'>
             Ainda não tem uma conta?{' '}
-            <Link to="/cadastro" className="text-indigo-800 hover:underline">
+            <Link to="/cadastro" className="text-red-900 hover:underline hover:text-red-700">
               Cadastre-se
             </Link>
           </p>
