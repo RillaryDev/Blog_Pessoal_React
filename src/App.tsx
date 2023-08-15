@@ -9,13 +9,13 @@ import Home from './paginas/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
 import ListaTemas from './components/temas/listaTemas/ListaTemas';
 import FormularioTema from './components/temas/formularioTema/FormularioTema';
-import DeletarTema from './components/temas/deletarTema/DeletarTemas'
 import ListaPostagens from './components/postagens/listaPostagens/ListaPostagens';
 import FormularioPostagem from './components/postagens/formularioPostagem/FormularioPostagem';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import Perfil from './paginas/perfil/Perfil';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import DeletarTemas from './components/temas/deletarTema/DeletarTemas';
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
               <Route path="/temas" element={<ListaTemas />} />
               <Route path="/cadastroTema" element={<FormularioTema />} />
               <Route path="/editarTema/:id" element={<FormularioTema />} />
-              <Route path="/deletarTema/:id" element={<DeletarTema />} />
+              <Route path="/deletarTema/:id" element={<DeletarTemas />} />
               <Route path="/postagens" element={<ListaPostagens />} />
               <Route path="/cadastroPostagem" element={<FormularioPostagem />} />
               <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />

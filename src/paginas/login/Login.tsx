@@ -38,7 +38,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-slate-950">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-red-950">
         <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
           <h2 className="text-white text-5xl ">Entrar</h2>
           <div className="flex flex-col w-full text-white">
@@ -65,7 +65,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <button  type='submit' className="rounded bg-red-900 hover:bg-red-700 text-black w-1/2 py-2 flex justify-center">
+          <button  type='submit' className="rounded bg-gray-600 hover:bg-gray-600 text-black w-1/2 py-2 flex justify-center">
            {isLoading ? <RotatingLines
             strokeColor="white"
             strokeWidth="5"
@@ -80,7 +80,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
 
           <p className='text-white'>
             Ainda não tem uma conta?{' '}
-            <Link to="/cadastro" className="text-red-900 hover:underline hover:text-red-700">
+            <Link to="/cadastro" className="text-gray-600 hover:underline hover:text-red-700">
               Cadastre-se
             </Link>
           </p>
